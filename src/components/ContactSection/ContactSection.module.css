@@ -1,0 +1,119 @@
+/* ============================================
+   CONTACT SECTION – CSS MODULE
+   ============================================ */
+
+.section {
+  position: relative;
+  z-index: 2;
+  background: var(--bg-primary);
+  padding: var(--section-padding) 24px;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ── Header ── */
+.header {
+  margin-bottom: 50px;
+}
+
+.sectionLabel {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent-orange);
+  display: block;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-primary);
+}
+
+.accent {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--accent-orange);
+}
+
+/* ── Card ── */
+.card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 50px;
+  max-width: 600px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  margin-bottom: 60px;
+}
+
+.cardText {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.emailLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, var(--accent-orange), #ff6b20);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: 12px;
+  transition: all 0.4s var(--ease-smooth);
+  text-decoration: none;
+}
+
+.emailLink:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 10px 40px rgba(255, 140, 66, 0.3),
+    0 0 20px rgba(255, 140, 66, 0.15);
+}
+
+.emailLink:active {
+  transform: translateY(0);
+}
+
+/* ── Footer ── */
+.footer {
+  padding-top: 40px;
+  border-top: 1px solid var(--glass-border);
+}
+
+.footerText {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.05em;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .card {
+    padding: 30px;
+  }
+
+  .header {
+    margin-bottom: 36px;
+  }
+}

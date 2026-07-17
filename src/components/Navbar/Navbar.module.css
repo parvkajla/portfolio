@@ -1,0 +1,216 @@
+/* ============================================
+   NAVBAR – CSS MODULE
+   ============================================ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 0 clamp(24px, 5vw, 60px);
+  height: 72px;
+  display: flex;
+  align-items: center;
+  transition: all 0.4s var(--ease-smooth);
+}
+
+.navbar.scrolled {
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ── Logo ── */
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logoDot {
+  color: var(--accent-orange);
+}
+
+/* ── Desktop nav links ── */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+}
+
+.navLink {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 8px 18px;
+  border-radius: 100px;
+  transition: all 0.3s var(--ease-smooth);
+  letter-spacing: 0.01em;
+}
+
+.navLink:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ── Right side ── */
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ctaBtn {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 100px;
+  background: linear-gradient(135deg, var(--accent-orange), #e06520);
+  border: none;
+  cursor: pointer;
+  transition: all 0.35s var(--ease-smooth);
+  letter-spacing: 0.01em;
+}
+
+.ctaBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(255, 140, 66, 0.35);
+}
+
+.ctaBtn:active {
+  transform: translateY(0);
+}
+
+/* ── Hamburger ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hamburger span {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: all 0.3s var(--ease-smooth);
+  transform-origin: center;
+}
+
+.hamburger.hamburgerOpen span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.hamburger.hamburgerOpen span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.hamburgerOpen span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* ── Mobile overlay ── */
+.mobileMenu {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s var(--ease-smooth);
+}
+
+.mobileMenu.mobileMenuOpen {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobileLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobileLink {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 12px 24px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.mobileLink:hover {
+  color: var(--text-primary);
+}
+
+.mobileCta {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 100px;
+  background: linear-gradient(135deg, var(--accent-orange), #e06520);
+  margin-top: 16px;
+  transition: all 0.35s ease;
+}
+
+.mobileCta:hover {
+  box-shadow: 0 6px 24px rgba(255, 140, 66, 0.35);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+
+  .ctaBtn {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
