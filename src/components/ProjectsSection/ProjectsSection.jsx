@@ -19,6 +19,20 @@ const PROJECTS = [
     link: 'https://github.com/parvkajla/EcoX-Watch.git',
     tags: ['Computer Vision', 'Real-time', 'Dashboard', 'Analytics'],
   },
+  {
+    title: 'OrbitalGuard-AI',
+    description:
+      'An AI-powered space situational awareness platform for satellite tracking, orbital debris monitoring, collision risk prediction, and intelligent space threat assessment.',
+    link: 'https://github.com/parvkajla/OrbitalGuard-AI',
+    tags: ['AI/ML', 'Space Tech', 'Satellite Tracking', 'Risk Prediction'],
+  },
+  {
+    title: 'OpenAbility',
+    description:
+      'An AI-powered inclusive employment platform connecting persons with disabilities to accessible job opportunities through personalized job matching, voice-first interactions, sign language recognition, and AI-driven resume building.',
+    link: 'https://github.com/parvkajla/OpenAbility',
+    tags: ['Next.js', 'AI/ML', 'Accessibility', 'TypeScript'],
+  },
 ];
 
 export default function ProjectsSection() {
