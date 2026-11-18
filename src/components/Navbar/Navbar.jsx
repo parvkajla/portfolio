@@ -7,6 +7,8 @@ const NAV_ITEMS = [
   { label: 'Home', target: 'home' },
   { label: 'About', target: 'about' },
   { label: 'Projects', target: 'projects' },
+  { label: 'Coding', target: 'coding' },
+  { label: 'Resume', target: 'resume' },
 ];
 
 export default function Navbar() {

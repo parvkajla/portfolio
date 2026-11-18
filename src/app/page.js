@@ -5,6 +5,8 @@ import HeroContent from '@/components/HeroContent/HeroContent';
 import ScrollIndicator from '@/components/ScrollIndicator/ScrollIndicator';
 import AboutSection from '@/components/AboutSection/AboutSection';
 import ProjectsSection from '@/components/ProjectsSection/ProjectsSection';
+import CodingSection from '@/components/CodingSection/CodingSection';
+import ResumeSection from '@/components/ResumeSection/ResumeSection';
 import ContactSection from '@/components/ContactSection/ContactSection';
 import styles from './page.module.css';
 
@@ -24,6 +26,8 @@ export default function Home() {
       {/* ── Content Sections ── */}
       <AboutSection />
       <ProjectsSection />
+      <CodingSection />
+      <ResumeSection />
       <ContactSection />
     </main>
   );
